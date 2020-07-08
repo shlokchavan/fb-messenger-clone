@@ -1,38 +1,82 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  -webkit-box-shadow: 0 8px 6px -6px e0e0e0;
+  -moz-box-shadow: 0 8px 6px -6px e0e0e0;
+  box-shadow: 0 8px 6px -6px #e0e0e0;
 }
 
-.App-link {
-  color: #61dafb;
+.app__title {
+  margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__userProfile {
+  background-color: #e9e9eb;
+  display: flex;
+  margin-left: auto;
+  padding: 20px;
+  border-radius: 3rem;
+}
+
+.app__userProfile img {
+  border-radius: 50%;
+  border: 5px solid #e9e9eb;
+  margin-right: 10px;
+}
+
+.app__Messages {
+  height: calc(100vh - 300px);
+  overflow: auto;
+}
+
+.app__todayChip {
+  margin: auto;
+  margin-top: 15px;
+  background-color: #e9e9eb;
+  padding: 4px 6px;
+  border-radius: 20px;
+  width: 100px;
+}
+
+.app__form {
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  background-color: #e9e9eb;
+  width: 100%;
+  /* margin: 10px; */
+}
+
+.app__formControl {
+  flex: 1;
+  display: flex !important;
+  flex-direction: row !important;
+}
+.app__input {
+  flex: 0.98;
+  background: white;
+  border-radius: 10px;
+  padding: 5px 30px;
+  border-bottom: none;
+  outline: none;
+}
+
+.app__input.MuiInput-underline:focus::before {
+  border-bottom: none !important;
+}
+
+.app__input.MuiInput-underline::before {
+  border-bottom: none;
+}
+
+.app__iconButton {
+  cursor: pointer;
+  flex: 0;
 }
