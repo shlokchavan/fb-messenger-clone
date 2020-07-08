@@ -30,13 +30,13 @@
 }
 
 .app__Messages {
-  height: calc(100vh - 300px);
+  height: calc(100vh - 240px);
   overflow: auto;
 }
 
 .app__todayChip {
   margin: auto;
-  margin-top: 15px;
+  margin-top: 2rem;
   background-color: #e9e9eb;
   padding: 4px 6px;
   border-radius: 20px;
@@ -79,4 +79,46 @@
 .app__iconButton {
   cursor: pointer;
   flex: 0;
+}
+
+/* SCROLL BAR CSS */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c3c3c3;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c3c3c3;
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+  .app__userProfile {
+    display: none;
+  }
+  .app__header {
+    padding: 1rem;
+  }
+  .app__header img {
+    width: 64px;
+    height: 64px;
+    padding-top: 1rem;
+  }
+  .app__title {
+    font-size: 1.5rem;
+    text-align: initial;
+  }
 }
